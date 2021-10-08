@@ -1,0 +1,62 @@
+{
+  "name": "next-boost",
+  "version": "0.11.0",
+  "description": "Add a cache layer for next.js SSR pages. Use stale-while-revalidate to boost the performance.",
+  "main": "dist/handler.js",
+  "bin": {
+    "next-boost": "dist/next/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "rm -rf dist && npm run build && npm run test",
+    "lint": "eslint src/*.ts test/*.ts",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": {
+    "name": "Rakuraku Jyo",
+    "email": "jyo.rakuraku@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjyo/next-boost.git"
+  },
+  "homepage": "https://github.com/rjyo/next-boost",
+  "license": "MIT",
+  "dependencies": {
+    "multee": "^0.2.3",
+    "next-boost-hdc-adapter": "^0.11.0"
+  },
+  "peerDependencies": {
+    "next": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.4.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
+    "@types/supertest": "^2.0.10",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.0.1",
+    "prettier": "^2.1.2",
+    "supertest": "^6.0.1",
+    "ts-jest": "^27.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.3"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "ssr",
+    "cache",
+    "stale-while-revalidate",
+    "react"
+  ]
+}
